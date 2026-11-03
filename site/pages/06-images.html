@@ -11,34 +11,52 @@
 <h1>Blogging with Free AI</h1>
 <p>A plain-English, step-by-step beginner manual by <strong>Asdale Dynamics, LLC</strong></p>
 </header>
-<nav><ul><li><a href="../index.html">Home</a></li>
+<nav class="nav-inner">
+<button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">☰</button>
+<ul id="nav-menu" class="nav-menu"><li><a href="../index.html">Home</a></li>
 <li><a href="01-getting-started.html">01 Getting Started</a></li>
 <li><a href="02-topic-ideas.html">02 Topic Ideas</a></li>
 <li><a href="03-outlines.html">03 Outlines</a></li>
 <li><a href="04-drafting.html">04 Drafting</a></li>
 <li><a href="05-headlines.html">05 Headlines</a></li>
-<li><a href="06-images.html">06 Images</a></li>
+<li><a href="06-images.html" aria-current="page">06 Images</a></li>
 <li><a href="07-scheduling.html">07 Scheduling</a></li>
 <li><a href="08-repurposing.html">08 Repurposing</a></li>
 <li><a href="09-privacy.html">09 Privacy</a></li>
-<li><a href="planner.html">Printable Planner</a></li></ul></nav>
+<li><a href="planner.html">Printable Planner</a></li></ul>
+</nav>
 <main>
 <h1>06 Images</h1>
 
 <p>Images make a blog post easier to read. You do not need to take photos or buy anything.</p>
 
 <h2>Step 1: Use free image sources</h2>
-<p>Good free options:</p>
-<ul>
-<li><strong>Unsplash</strong> (unsplash.com) — free photos, free to use</li>
-<li><strong>Pexels</strong> (pexels.com) — free photos and videos</li>
-<li><strong>Pixabay</strong> (pixabay.com) — free photos and illustrations</li>
-</ul>
+<p>Good free options (no attribution required for most uses):</p>
+<table>
+<tr><th>Site</th><th>Best for</th><th>Link</th></tr>
+<tr><td><strong>Unsplash</strong></td><td>High-quality photos</td><td><a href="https://unsplash.com">unsplash.com</a></td></tr>
+<tr><td><strong>Pexels</strong></td><td>Photos + videos</td><td><a href="https://pexels.com">pexels.com</a></td></tr>
+<tr><td><strong>Pixabay</strong></td><td>Illustrations + vectors</td><td><a href="https://pixabay.com">pixabay.com</a></td></tr>
+<tr><td><strong>Wikimedia Commons</strong></td><td>Educational/historical</td><td><a href="https://commons.wikimedia.org">commons.wikimedia.org</a></td></tr>
+</table>
 <p>Search for your topic, download an image, and upload it to your blog.</p>
+<p><strong>Tip:</strong> Search for "minimal" or "flat lay" + your topic for clean, blog-friendly images.</p>
 
 <h2>Step 2: Make images with free AI</h2>
-<p>Many free AI tools can generate images from a description. Try a prompt like this:</p>
-<div class="card"><code>"A simple, friendly illustration of someone writing at a laptop. Bright colors, clean style, no text."</code></div>
+<p>Many free AI tools can generate images from a description.</p>
+<p><strong>Free tools to try:</strong></p>
+<ul>
+<li><strong>Bing Image Creator</strong> (free with Microsoft account) — powered by DALL-E</li>
+<li><strong>Leonardo.ai</strong> (150 free credits/day) — good for illustrations</li>
+<li><strong>Adobe Firefly</strong> (free tier) — good for text effects</li>
+<li><strong>Local</strong> via Stable Diffusion (if you have a GPU) — 100% private</li>
+</ul>
+<p><strong>Prompt formulas that work well for blogs:</strong></p>
+<div class="card"><code>"A simple, friendly illustration of [topic]. Clean flat design, bright pastel colors, minimal details, no text, white background."</code></div>
+<div class="card"><code>"Flat lay photo of [topic items] on a light wood desk. Natural lighting, minimal composition, high quality, no people."</code></div>
+<div class="card"><code>"Minimal line art icon of [topic]. Single weight black lines, white background, simple and clear."</code></div>
+<p><strong>Example for a budgeting post:</strong></p>
+<div class="card"><code>"Flat lay of a simple spreadsheet on a laptop screen, a coffee mug, and a notebook with a pen. Clean minimal style, natural morning light, light wood desk, no people."</code></div>
 <p>Download the result and upload it to your blog.</p>
 
 <h2>Step 3: Add alt text</h2>
@@ -46,11 +64,25 @@
 <ul>
 <li>"A person typing on a laptop at a desk."</li>
 <li>"A hand holding a smartphone with a blog open."</li>
+<li>"A simple spreadsheet showing income and expenses."</li>
 </ul>
-<p>Most blog platforms ask for alt text when you upload an image. Fill it in.</p>
+<p>Most blog platforms ask for alt text when you upload an image. Fill it in — it helps with accessibility and SEO.</p>
 
 <h2>Step 4: Keep it small</h2>
-<p>Large images make pages slow to load. If an image is bigger than you need, resize it before uploading. Many computers have a free "Preview" or "Photos" app that can resize images.</p>
+<p>Large images make pages slow to load. If an image is bigger than you need, resize it before uploading.</p>
+<p><strong>Quick resize targets:</strong></p>
+<ul>
+<li>Blog header/featured image: 1200px wide max</li>
+<li>In-post images: 800px wide max</li>
+<li>File size: under 200 KB each if possible</li>
+</ul>
+<p><strong>Free tools to resize:</strong></p>
+<ul>
+<li>Mac: Preview → Tools → Adjust Size</li>
+<li>Windows: Photos app → Resize</li>
+<li>Online: <a href="https://squoosh.app">squoosh.app</a> (drag, drop, download)</li>
+<li>Command line: <code>magick input.jpg -resize 1200x output.jpg</code> (ImageMagick)</li>
+</ul>
 
 <div class="privacy-rule"><strong>Privacy reminder:</strong> do not upload photos that show real people, addresses, license plates, or private documents. Use stock or AI-generated images instead.</div>
 
@@ -59,6 +91,7 @@
 <li>I have at least one image in my post</li>
 <li>The image has alt text</li>
 <li>The image does not show private information</li>
+<li>The image is under 200 KB (or reasonably sized)</li>
 </ul>
 <p>Next: <a href="07-scheduling.html">07 Scheduling</a></p>
 
@@ -69,5 +102,17 @@ Beginner-friendly AI education, books, and practical tools.</p>
 <p><em>Privacy rule: never paste personal information into an AI tool.</em></p>
 <p>MIT License. Copyright (c) 2026 Asdale Dynamics, LLC. See <a href="../../LICENSE">LICENSE</a>.</p>
 </footer>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var menu = document.getElementById('nav-menu');
+  if (btn && menu) {
+    btn.addEventListener('click', function() {
+      var open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+  }
+})();
+</script>
 </body>
 </html>

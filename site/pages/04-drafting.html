@@ -11,17 +11,20 @@
 <h1>Blogging with Free AI</h1>
 <p>A plain-English, step-by-step beginner manual by <strong>Asdale Dynamics, LLC</strong></p>
 </header>
-<nav><ul><li><a href="../index.html">Home</a></li>
+<nav class="nav-inner">
+<button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">☰</button>
+<ul id="nav-menu" class="nav-menu"><li><a href="../index.html">Home</a></li>
 <li><a href="01-getting-started.html">01 Getting Started</a></li>
 <li><a href="02-topic-ideas.html">02 Topic Ideas</a></li>
 <li><a href="03-outlines.html">03 Outlines</a></li>
-<li><a href="04-drafting.html">04 Drafting</a></li>
+<li><a href="04-drafting.html" aria-current="page">04 Drafting</a></li>
 <li><a href="05-headlines.html">05 Headlines</a></li>
 <li><a href="06-images.html">06 Images</a></li>
 <li><a href="07-scheduling.html">07 Scheduling</a></li>
 <li><a href="08-repurposing.html">08 Repurposing</a></li>
 <li><a href="09-privacy.html">09 Privacy</a></li>
-<li><a href="planner.html">Printable Planner</a></li></ul></nav>
+<li><a href="planner.html">Printable Planner</a></li></ul>
+</nav>
 <main>
 <h1>04 Drafting</h1>
 
@@ -31,6 +34,7 @@
 <p>Open your outline. Take the first section and ask the AI:</p>
 <div class="card"><code>"I am writing a blog post for beginners. Write section [number]: [one-sentence goal from your outline]. Use plain English, short sentences, and a friendly tone. Do not use jargon. If you use a technical word, explain it in one sentence."</code></div>
 <p>Write the AI's answer in your own words. Change anything that does not sound like you.</p>
+<p><strong>Pro tip:</strong> Paste your outline into the chat first, then ask for one section at a time. The AI will remember the context.</p>
 
 <h2>Step 2: Read it out loud</h2>
 <p>Read your draft aloud. If you stumble over a sentence, simplify it. If a sentence sounds like a robot, rewrite it in your own words.</p>
@@ -43,14 +47,41 @@
 <li>Did I share patient, client, or customer details?</li>
 <li>Did I paste any passwords or account numbers?</li>
 </ul>
-<p>If yes, delete or change it before publishing. Read <a href="09-privacy.html">09 Privacy</a>.</p>
+<p>If yes, delete or change it before publishing. See <a href="09-privacy.html">09 Privacy</a>.</p>
 
 <h2>Step 4: Add a short introduction and conclusion</h2>
-<p><strong>Introduction:</strong> tell the reader what this post is about and why it matters. Keep it to 2–4 sentences.<br>
-<strong>Conclusion:</strong> tell the reader one small thing they can try today. End there.</p>
+<p><strong>Introduction:</strong> Tell the reader what this post is about and why it matters. Keep it to 2–4 sentences.</p>
+<p><strong>Conclusion:</strong> Tell the reader one small thing they can try today. End there.</p>
 
-<h2>Example drafting prompt</h2>
-<div class="card"><code>"Write a 300-word beginner section about choosing a blog name. Use plain English, short sentences, and a warm tone. Do not include personal information. Do not give medical advice."</code></div>
+<h2>Better drafting prompts</h2>
+<p><strong>For a "how-to" section:</strong></p>
+<div class="card"><code>"Write a beginner-friendly section explaining [specific step]. Use numbered steps. Keep each step to one short sentence. Add a common mistake to avoid."</code></div>
+<p><strong>For an explanation section:</strong></p>
+<div class="card"><code>"Explain [concept] like you're talking to a friend who's never heard of it. Use an everyday analogy. No jargon. Under 200 words."</code></div>
+<p><strong>For a "mistakes to avoid" section:</strong></p>
+<div class="card"><code>"List 3 common mistakes beginners make with [topic]. For each, explain why it happens and what to do instead. Keep it encouraging, not shaming."</code></div>
+
+<h2>Worked example: Drafting "How to Set Up a Simple Spreadsheet Budget"</h2>
+<p><strong>Outline section:</strong> "Step 2: List your income — write down every source of money coming in each month"</p>
+<p><strong>Prompt to AI:</strong></p>
+<div class="card"><code>"I am writing a blog post for beginners. Write section 2: 'List your income — write down every source of money coming in each month.' Use plain English, short sentences, and a friendly tone. Include a 3-row example table. Do not use jargon."</code></div>
+<p><strong>AI gives you a draft. You edit it to sound like you.</strong></p>
+<p><strong>Your edited version:</strong></p>
+<pre><code>"Open a new spreadsheet. In column A, write 'Income Sources.' In column B, write 'Amount.'
+
+List every way money comes in: your paycheck, side gig, child support, interest — everything. If it varies month to month, use the lowest recent amount.
+
+<strong>Example:</strong>
+| Income Source | Amount |
+|---------------|--------|
+| Main job | $3,200 |
+| Weekend tutoring | $300 |
+| <strong>Total</strong> | <strong>$3,500</strong> |
+
+That's it. You now know exactly what you're working with."</code></pre>
+
+<h2>Step 5: Give it a headline</h2>
+<p>Move to <a href="05-headlines.html">05 Headlines</a> to write a title.</p>
 
 <h2>Quick check</h2>
 <ul class="checklist">
@@ -68,5 +99,17 @@ Beginner-friendly AI education, books, and practical tools.</p>
 <p><em>Privacy rule: never paste personal information into an AI tool.</em></p>
 <p>MIT License. Copyright (c) 2026 Asdale Dynamics, LLC. See <a href="../../LICENSE">LICENSE</a>.</p>
 </footer>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var menu = document.getElementById('nav-menu');
+  if (btn && menu) {
+    btn.addEventListener('click', function() {
+      var open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+  }
+})();
+</script>
 </body>
 </html>

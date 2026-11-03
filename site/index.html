@@ -11,7 +11,9 @@
 <h1>Blogging with Free AI</h1>
 <p>A plain-English, step-by-step beginner manual by <strong>Asdale Dynamics, LLC</strong></p>
 </header>
-<nav><ul><li><a href="index.html">Home</a></li>
+<nav class="nav-inner">
+<button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">☰</button>
+<ul id="nav-menu" class="nav-menu"><li><a href="index.html" aria-current="page">Home</a></li>
 <li><a href="pages/01-getting-started.html">01 Getting Started</a></li>
 <li><a href="pages/02-topic-ideas.html">02 Topic Ideas</a></li>
 <li><a href="pages/03-outlines.html">03 Outlines</a></li>
@@ -21,7 +23,8 @@
 <li><a href="pages/07-scheduling.html">07 Scheduling</a></li>
 <li><a href="pages/08-repurposing.html">08 Repurposing</a></li>
 <li><a href="pages/09-privacy.html">09 Privacy</a></li>
-<li><a href="pages/planner.html">Printable Planner</a></li></ul></nav>
+<li><a href="pages/planner.html">Printable Planner</a></li></ul>
+</nav>
 <main>
 <h1>Blogging with Free AI — A Beginner Manual</h1>
 
@@ -57,5 +60,17 @@ Beginner-friendly AI education, books, and practical tools.</p>
 <p><em>Privacy rule: never paste personal information into an AI tool.</em></p>
 <p>MIT License. Copyright (c) 2026 Asdale Dynamics, LLC. See <a href="../LICENSE">LICENSE</a>.</p>
 </footer>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var menu = document.getElementById('nav-menu');
+  if (btn && menu) {
+    btn.addEventListener('click', function() {
+      var open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+  }
+})();
+</script>
 </body>
 </html>

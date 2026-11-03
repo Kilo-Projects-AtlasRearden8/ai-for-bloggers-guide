@@ -11,8 +11,10 @@
 <h1>Blogging with Free AI</h1>
 <p>A plain-English, step-by-step beginner manual by <strong>Asdale Dynamics, LLC</strong></p>
 </header>
-<nav><ul><li><a href="../index.html">Home</a></li>
-<li><a href="01-getting-started.html">01 Getting Started</a></li>
+<nav class="nav-inner">
+<button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">☰</button>
+<ul id="nav-menu" class="nav-menu"><li><a href="../index.html">Home</a></li>
+<li><a href="01-getting-started.html" aria-current="page">01 Getting Started</a></li>
 <li><a href="02-topic-ideas.html">02 Topic Ideas</a></li>
 <li><a href="03-outlines.html">03 Outlines</a></li>
 <li><a href="04-drafting.html">04 Drafting</a></li>
@@ -21,7 +23,8 @@
 <li><a href="07-scheduling.html">07 Scheduling</a></li>
 <li><a href="08-repurposing.html">08 Repurposing</a></li>
 <li><a href="09-privacy.html">09 Privacy</a></li>
-<li><a href="planner.html">Printable Planner</a></li></ul></nav>
+<li><a href="planner.html">Printable Planner</a></li></ul>
+</nav>
 <main>
 <h1>01 Getting Started</h1>
 
@@ -29,16 +32,32 @@
 
 <h2>Step 1: Pick a place to publish</h2>
 <p>Good free options include:</p>
-<ul>
-<li><strong>Blogger</strong> — free hosting, simple, owned by Google</li>
-<li><strong>WordPress.com</strong> — free plan with a wordpress.com address</li>
-<li><strong>Substack</strong> — free to start, good for newsletter-style blogs</li>
-<li><strong>GitHub Pages</strong> — free static hosting (best if you want to learn a little tech)</li>
-</ul>
+<table>
+<tr><th>Platform</th><th>Best for</th><th>Your URL will be</th></tr>
+<tr><td><strong>Blogger</strong></td><td>Simple posts, Google integration</td><td><code>yourname.blogspot.com</code></td></tr>
+<tr><td><strong>WordPress.com</strong></td><td>More design control, plugins</td><td><code>yourname.wordpress.com</code></td></tr>
+<tr><td><strong>Substack</strong></td><td>Newsletter + blog combined</td><td><code>yourname.substack.com</code></td></tr>
+<tr><td><strong>GitHub Pages</strong></td><td>Learning web basics, full control</td><td><code>yourname.github.io</code></td></tr>
+</table>
+<p><strong>Recommendation for total beginners:</strong> Blogger or Substack. Both take 5 minutes to set up and require zero technical knowledge.</p>
 <p>Pick one and create your account. Use a name you are comfortable sharing publicly. Your blog is public, so treat everything you publish as public.</p>
 
 <h2>Step 2: Choose free AI tools</h2>
-<p>You do not need a paid AI subscription. Good free options include free chat-based AI tools from major providers, free local AI models that run on your own computer, and free image generators with daily credit limits. When you sign up, use an email address you do not mind sharing.</p>
+<p>You do not need a paid AI subscription. Good free options:</p>
+<p><strong>Free chat AI (pick one):</strong></p>
+<ul>
+<li><strong>Claude.ai</strong> (free tier, generous daily limits)</li>
+<li><strong>ChatGPT</strong> (free tier at chat.openai.com)</li>
+<li><strong>Gemini</strong> (free at gemini.google.com)</li>
+<li><strong>Local models</strong> via <a href="https://ollama.com">Ollama</a> or <a href="https://lmstudio.ai">LM Studio</a> — runs on your computer, 100% private</li>
+</ul>
+<p><strong>Free image generation:</strong></p>
+<ul>
+<li><strong>Bing Image Creator</strong> (free with Microsoft account)</li>
+<li><strong>Leonardo.ai</strong> (daily free credits)</li>
+<li><strong>Local</strong> via Stable Diffusion (if you have a decent GPU)</li>
+</ul>
+<p>When you sign up, use an email address you do not mind sharing. Do not use your work email unless you are sure it is allowed.</p>
 
 <div class="privacy-rule"><strong>Step 3: Learn the privacy rule before you write anything.</strong><br>
 <strong>Never paste personal information into an AI tool.</strong> That means no names, addresses, phone numbers, emails, patient or client details, passwords, or account numbers — yours or anyone else's. Assume anything you type into a free AI tool could be seen by the company that runs it.</div>
@@ -46,7 +65,7 @@
 <h2>Step 4: Write your first post</h2>
 <p>Once your blog is set up and you know the privacy rule, move to <a href="02-topic-ideas.html">02 Topic Ideas</a> to decide what to write about.</p>
 
-<h2>Quick check</h2>
+<h2>Quick check before you continue</h2>
 <ul class="checklist">
 <li>I have a blog account on a free platform</li>
 <li>I know which free AI tool I will use</li>
@@ -61,5 +80,17 @@ Beginner-friendly AI education, books, and practical tools.</p>
 <p><em>Privacy rule: never paste personal information into an AI tool.</em></p>
 <p>MIT License. Copyright (c) 2026 Asdale Dynamics, LLC. See <a href="../../LICENSE">LICENSE</a>.</p>
 </footer>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var menu = document.getElementById('nav-menu');
+  if (btn && menu) {
+    btn.addEventListener('click', function() {
+      var open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+  }
+})();
+</script>
 </body>
 </html>

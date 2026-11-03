@@ -6,10 +6,14 @@ You do not need to spend money to start a blog with AI. Everything in this manua
 
 Good free options include:
 
-- **Blogger** — free hosting, simple, owned by Google
-- **WordPress.com** — free plan with a wordpress.com address
-- **Substack** — free to start, good for newsletter-style blogs
-- **GitHub Pages** — free static hosting (best if you want to learn a little tech)
+| Platform | Best for | Your URL will be |
+|----------|----------|------------------|
+| **Blogger** | Simple posts, Google integration | `yourname.blogspot.com` |
+| **WordPress.com** | More design control, plugins | `yourname.wordpress.com` |
+| **Substack** | Newsletter + blog combined | `yourname.substack.com` |
+| **GitHub Pages** | Learning web basics, full control | `yourname.github.io` |
+
+**Recommendation for total beginners:** Blogger or Substack. Both take 5 minutes to set up and require zero technical knowledge.
 
 Pick one and create your account. Use a name you are comfortable sharing publicly. Your blog is public, so treat everything you publish as public.
 
@@ -17,9 +21,16 @@ Pick one and create your account. Use a name you are comfortable sharing publicl
 
 You do not need a paid AI subscription. Good free options:
 
-- Free chat-based AI tools from major providers (many have generous free daily limits)
-- Free local AI models that run on your own computer
-- Free image generators with daily credit limits
+**Free chat AI (pick one):**
+- **Claude.ai** (free tier, generous daily limits)
+- **ChatGPT** (free tier at chat.openai.com)
+- **Gemini** (free at gemini.google.com)
+- **Local models** via [Ollama](https://ollama.com) or [LM Studio](https://lmstudio.ai) — runs on your computer, 100% private
+
+**Free image generation:**
+- **Bing Image Creator** (free with Microsoft account)
+- **Leonardo.ai** (daily free credits)
+- **Local** via Stable Diffusion (if you have a decent GPU)
 
 When you sign up, use an email address you do not mind sharing. Do not use your work email unless you are sure it is allowed.
 

@@ -10,6 +10,8 @@ Open your outline. Take the first section and ask the AI:
 
 Write the AI's answer in your own words. Change anything that does not sound like you.
 
+**Pro tip:** Paste your outline into the chat first, then ask for one section at a time. The AI will remember the context.
+
 ## Step 2: Read it out loud
 
 Read your draft aloud. If you stumble over a sentence, simplify it. If a sentence sounds like a robot, rewrite it in your own words.
@@ -31,13 +33,43 @@ If yes, delete or change it before publishing. See [09 Privacy](09-privacy.md).
 
 **Conclusion:** Tell the reader one small thing they can try today. End there.
 
+## Better drafting prompts
+
+**For a "how-to" section:**
+> "Write a beginner-friendly section explaining [specific step]. Use numbered steps. Keep each step to one short sentence. Add a common mistake to avoid."
+
+**For an explanation section:**
+> "Explain [concept] like you're talking to a friend who's never heard of it. Use an everyday analogy. No jargon. Under 200 words."
+
+**For a "mistakes to avoid" section:**
+> "List 3 common mistakes beginners make with [topic]. For each, explain why it happens and what to do instead. Keep it encouraging, not shaming."
+
+## Worked example: Drafting "How to Set Up a Simple Spreadsheet Budget"
+
+**Outline section:** "Step 2: List your income — write down every source of money coming in each month"
+
+**Prompt to AI:**
+> "I am writing a blog post for beginners. Write section 2: 'List your income — write down every source of money coming in each month.' Use plain English, short sentences, and a friendly tone. Include a 3-row example table. Do not use jargon."
+
+**AI gives you a draft. You edit it to sound like you.**
+
+**Your edited version:**
+> "Open a new spreadsheet. In column A, write 'Income Sources.' In column B, write 'Amount.'
+>
+> List every way money comes in: your paycheck, side gig, child support, interest — everything. If it varies month to month, use the lowest recent amount.
+>
+> **Example:**
+> | Income Source | Amount |
+> |---------------|--------|
+> | Main job | $3,200 |
+> | Weekend tutoring | $300 |
+> | **Total** | **$3,500** |
+>
+> That's it. You now know exactly what you're working with."
+
 ## Step 5: Give it a headline
 
 Move to [05 Headlines](05-headlines.md) to write a title.
-
-## Example drafting prompt
-
-> "Write a 300-word beginner section about choosing a blog name. Use plain English, short sentences, and a warm tone. Do not include personal information. Do not give medical advice."
 
 ## Quick check
 

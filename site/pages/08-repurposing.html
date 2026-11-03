@@ -11,7 +11,9 @@
 <h1>Blogging with Free AI</h1>
 <p>A plain-English, step-by-step beginner manual by <strong>Asdale Dynamics, LLC</strong></p>
 </header>
-<nav><ul><li><a href="../index.html">Home</a></li>
+<nav class="nav-inner">
+<button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">☰</button>
+<ul id="nav-menu" class="nav-menu"><li><a href="../index.html">Home</a></li>
 <li><a href="01-getting-started.html">01 Getting Started</a></li>
 <li><a href="02-topic-ideas.html">02 Topic Ideas</a></li>
 <li><a href="03-outlines.html">03 Outlines</a></li>
@@ -19,9 +21,10 @@
 <li><a href="05-headlines.html">05 Headlines</a></li>
 <li><a href="06-images.html">06 Images</a></li>
 <li><a href="07-scheduling.html">07 Scheduling</a></li>
-<li><a href="08-repurposing.html">08 Repurposing</a></li>
+<li><a href="08-repurposing.html" aria-current="page">08 Repurposing</a></li>
 <li><a href="09-privacy.html">09 Privacy</a></li>
-<li><a href="planner.html">Printable Planner</a></li></ul></nav>
+<li><a href="planner.html">Printable Planner</a></li></ul>
+</nav>
 <main>
 <h1>08 Repurposing</h1>
 
@@ -35,12 +38,18 @@
 <div class="card"><code>"I have a blog post called '[title]'. Turn it into: (1) a 3-sentence social media summary, (2) 3 short tips I can post separately, (3) 3 questions I can ask my readers."</code></div>
 <p>Paste your post text (without personal information) if the AI needs it, or just share the title and main points.</p>
 
+<p><strong>More repurposing prompts to try:</strong></p>
+<div class="card"><code>"Turn this blog post into a 5-tweet thread (or 5 Mastodon posts). Each tweet under 280 chars. Include the blog link in the last one."</code></div>
+<div class="card"><code>"Extract 3 quotable sentences from this post that work as standalone graphics."</code></div>
+<div class="card"><code>"Rewrite the introduction of this post as a 100-word email newsletter teaser with a 'Read more' link."</code></div>
+<div class="card"><code>"Create a 3-item checklist from this post that someone could print and use."</code></div>
+
 <h2>Step 3: Share where your readers are</h2>
 <p>Post the summary and tips wherever you already spend time:</p>
 <ul>
-<li>A newsletter</li>
-<li>Social media</li>
-<li>A forum or community related to your topic</li>
+<li>A newsletter (Substack, Buttondown, Beehiiv free tiers)</li>
+<li>Social media (Mastodon, Bluesky, Threads, LinkedIn, X)</li>
+<li>A forum or community related to your topic (Reddit, Discord, Facebook Groups)</li>
 <li>A note to friends who might find it useful</li>
 </ul>
 
@@ -49,20 +58,31 @@
 
 <div class="privacy-rule"><strong>Privacy reminder:</strong> do not repurpose anything that contains personal information. Remove names, addresses, and private details first.</div>
 
-<h2>Example</h2>
-<p><strong>Blog post:</strong> How to Start a Free Blog in 30 Minutes</p>
-<p><strong>Repurposed tips:</strong></p>
+<h2>Worked example: "How to Set Up a Simple Spreadsheet Budget"</h2>
+<p><strong>Original post sections:</strong></p>
 <ol>
-<li>"Pick a free platform like Blogger, WordPress.com, or Substack."</li>
-<li>"Use a plain English headline so readers know what to expect."</li>
-<li>"Schedule one post per week so you do not burn out."</li>
+<li>Why budget with a spreadsheet</li>
+<li>List your income</li>
+<li>List your fixed expenses</li>
+<li>List your variable expenses</li>
+<li>Track for 30 days</li>
+<li>Review and adjust</li>
 </ol>
+<p><strong>Repurposed into:</strong></p>
+<table>
+<tr><th>Format</th><th>Content</th></tr>
+<tr><td><strong>Mastodon thread (5 posts)</strong></td><td>1/5 "Budgeting doesn't need an app. A simple spreadsheet works better for many people. Here's how to start → [link]"<br>2/5 "Step 1: List every income source. Use the *lowest* recent amount for variable income. [link]"<br>3/5 "Step 2: Fixed expenses (rent, insurance). These don't change. [link]"<br>4/5 "Step 3: Variable expenses (groceries, gas). Track for 30 days to find your real numbers. [link]"<br>5/5 "Step 4: Review monthly. Adjust. That's it. Full guide: [link]"</td></tr>
+<tr><td><strong>3 standalone tips</strong></td><td>1. "Use your *lowest* recent income for budgeting — not your best month."<br>2. "Track variable spending for 30 days before setting limits."<br>3. "Review your budget on the 1st of every month. 10 minutes max."</td></tr>
+<tr><td><strong>Newsletter teaser</strong></td><td>"Most budgeting apps overcomplicate things. This month I built a simple spreadsheet that shows exactly where my money goes — no subscriptions, no sync issues. Here's the template and the 4-step method: [link]"</td></tr>
+<tr><td><strong>Printable checklist</strong></td><td>☐ List all income sources<br>☐ List fixed expenses<br>☐ List variable expense categories<br>☐ Track spending for 30 days<br>☐ Review & adjust on the 1st</td></tr>
+</table>
 
 <h2>Quick check</h2>
 <ul class="checklist">
 <li>I picked one post to repurpose</li>
 <li>I made at least 3 smaller pieces from it</li>
 <li>I removed personal information before sharing</li>
+<li>Each piece links back to the original post</li>
 </ul>
 <p>Next: <a href="09-privacy.html">09 Privacy</a></p>
 
@@ -73,5 +93,17 @@ Beginner-friendly AI education, books, and practical tools.</p>
 <p><em>Privacy rule: never paste personal information into an AI tool.</em></p>
 <p>MIT License. Copyright (c) 2026 Asdale Dynamics, LLC. See <a href="../../LICENSE">LICENSE</a>.</p>
 </footer>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var menu = document.getElementById('nav-menu');
+  if (btn && menu) {
+    btn.addEventListener('click', function() {
+      var open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+  }
+})();
+</script>
 </body>
 </html>
